@@ -20,4 +20,5 @@ print("Description: ", video.description)
 #Rating
 print("Rating: ", video.rating)
 
-#TODO: Add the download part and fix this HTTP Error
+#TODO: Add the download part
+#Update: She runs, just update pytube to the most recent version :/
