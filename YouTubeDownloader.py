@@ -1,4 +1,5 @@
 #Program for downloading YouTube Videos.
+#Make sure to download the latest version of pytube, or else you will receive and HTTP Error 410 Gone.
 from pytube import YouTube
 
 #URL
@@ -20,5 +21,10 @@ print("Description: ", video.description)
 #Rating
 print("Rating: ", video.rating)
 
-#TODO: Add the download part
-#Update: She runs, just update pytube to the most recent version :/
+#Find highest quality
+yts = video.streams.get_highest_resolution()
+
+#Downloading time!
+print("Downloading...")
+yts.download() #Make sure this is your file location or no download will occur
+print("Enjoy your video!")
